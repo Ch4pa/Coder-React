@@ -1,0 +1,48 @@
+.nav{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 170px;
+    border-bottom:  2px solid rgba(0, 0, 0, 0.482);
+}
+
+.divNav{
+    width: 20%;
+    text-align: center;
+}
+
+.imgNav{
+    width: 150px;
+    height: 40px;
+}
+.ulNav{
+ text-decoration: none;
+ list-style: none;
+ width: 50%;
+ display: flex;
+ justify-content: flex-end;
+ align-items: flex-end;
+ gap: 40px;
+ 
+}
+
+ul a{
+    text-decoration: none;
+}
+
+.aNav{
+    text-decoration: none;
+    color: black;
+}
+.liNav{
+    color: black;
+    font-size: 1.1rem;
+}
+
+.bi bi-cart3{
+    height: 25px;
+    width: 25px;
+}
