@@ -1,7 +1,9 @@
 import React from 'react'
+import Count from '../Count'
 import "./Itemcontainer.css"
 
 const Itemcontainer = ({greeting}) => {
+  
   return (
     <div className='divContainer'>
       <p>{greeting}</p>

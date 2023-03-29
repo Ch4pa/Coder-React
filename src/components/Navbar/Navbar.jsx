@@ -1,6 +1,5 @@
 import React from 'react'
 import logo from "../../assets/logo.jpg"
-import Carritodecompras from "../../assets/Carritodecompras.png"
 import "./Navbar.css"
 import CardWidget from '../CartWidget'
 
