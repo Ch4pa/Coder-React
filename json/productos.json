@@ -1,0 +1,44 @@
+[
+    {
+        "id":1,
+        "name":"Remera HT",
+        "price":"$5000",
+        "img":""
+    },
+    {
+        "id":2,
+        "name":"Remera HT",
+        "price":"$5000",
+        "img":""
+    },
+    {
+        "id":3,
+        "name":"Remera HT",
+        "price":"$5000",
+        "img":""
+    },
+    {
+        "id":4,
+        "name":"Remera HT",
+        "price":"$5000",
+        "img":""
+    },
+    {
+        "id":5,
+        "name":"Remera HT",
+        "price":"$5000",
+        "img":""
+    },
+    {
+        "id":6,
+        "name":"Remera HT",
+        "price":"$5000",
+        "img":""
+    },
+    {
+        "id":7,
+        "name":"Remera HT",
+        "price":"$5000",
+        "img":""
+    }
+]

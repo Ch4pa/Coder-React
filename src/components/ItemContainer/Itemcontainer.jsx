@@ -1,68 +1,14 @@
 import React from 'react'
-import Count from '../Count'
-import "./Itemcontainer.css"
+import Navbar from '../Navbar/Navbar'
+import ProductsList from '../ProductList/ProductsList'
 
-const Itemcontainer = ({greeting}) => {
-  
+const Itemcontainer = ({productos}) => {
   return (
-    <div className='divContainer'>
-      <p>{greeting}</p>
-      <div className='divCards'>
-        <div className='card'>
-          <div className='cardImg'>
-            <img src="" alt="" />
-          </div>
-          <div className='cardText'>
-            <p>Producto</p>
-            <span>$5000</span>
-          </div>
-        </div>
-        <div className='card'>
-          <div className='cardImg'>
-            <img src="" alt="" />
-          </div>
-          <div className='cardText'>
-            <p>Producto</p>
-            <span>$5000</span>
-          </div>
-        </div>
-        <div className='card'>
-          <div className='cardImg'>
-            <img src="" alt="" />
-          </div>
-          <div className='cardText'>
-            <p>Producto</p>
-            <span>$5000</span>
-          </div>
-        </div>
-        <div className='card'>
-          <div className='cardImg'>
-            <img src="" alt="" />
-          </div>
-          <div className='cardText'>
-            <p>Producto</p>
-            <span>$5000</span>
-          </div>
-        </div>
-        <div className='card'>
-          <div className='cardImg'>
-            <img src="" alt="" />
-          </div>
-          <div className='cardText'>
-            <p>Producto</p>
-            <span>$5000</span>
-          </div>
-        </div>
-        <div className='card'>
-          <div className='cardImg'>
-            <img src="" alt="" />
-          </div>
-          <div className='cardText'>
-            <p>Producto</p>
-            <span>$5000</span>
-          </div>
-        </div>
-      </div>
+    <div>
+      <Navbar/>
+      {productos.map(productos => ( 
+        <ProductsList producto={productos} key={productos.id}/>
+        ))} 
     </div>
   )
 }

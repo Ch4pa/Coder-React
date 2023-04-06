@@ -1,11 +1,10 @@
-import React from 'react'
+import { Link } from "react-router-dom"
 import logo from "../../assets/logo.jpg"
-import "./Navbar.css"
 import CardWidget from '../CartWidget'
-import { Link } from 'react-router-dom'
 
-const Navbar = () => {
+const Home = () => {
   return (
+    <div>
     <nav className='nav'>
       <Link to="/home" className='divNav'>
         <img className='imgNav' src={logo} alt="Logo" />
@@ -18,8 +17,10 @@ const Navbar = () => {
         <a href=""> <CardWidget /> 6</a>
       </ul>
     </nav>
+    
+    </div>
+
   )
 }
 
-export default Navbar
-
+export default Home

@@ -1,10 +1,13 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import './App.css'
+import CardDetail from './CardDetail/CardDetail'
 import Count from './components/Count'
+import Home from './components/Home/home'
 import Itemcontainer from './components/ItemContainer/Itemcontainer'
 import Navbar from './components/Navbar/Navbar'
-import ProductItem from './components/ProductItem/ProductsList'
+
 
 function App() {
   const [count, setCount] = useState(1);
@@ -13,8 +16,8 @@ function App() {
 
   const getProductos = async () => {
     try {
-      const res = await axios("https://fakestoreapi.com/products");
-      setProductos(res.data);
+      const { data } = await axios("https://fakestoreapi.com/products");
+      setProductos(data);
     } catch (error) {
       console.log("ERROR" + error)
     }
@@ -25,16 +28,18 @@ function App() {
 
   }, [])
 
-  console.log(productos);
-
   return (
-    <div className='container'>
-      <Navbar />
-      <Count count={count} setCount={setCount} />
-      {productos.map(producto => ( 
-      <ProductItem producto={producto} key={producto.id}/>
-      ))}
-    </div>
+    <div>
+      <Routes>
+      <Route path="/" element={ <Navigate to="home"/>}/>
+      <Route path="/home" element={ <Home />}/>
+      <Route path="/products" element={<Itemcontainer productos={productos}/>}/>
+      <Route path="/products/:id" element={<CardDetail/>}/>
+      <Route path='/404' element={<h2>404</h2>}/>
+      </Routes>
+      <h1>Bienvenido a Nuestra Pagina</h1>
+      </div>
+    
   )
 }
 
