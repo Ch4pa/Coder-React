@@ -1,18 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import "./index.css"
 
-const ProductsList = ({producto}) => {
+const ProductsList = ({ item, deleteItems }) => {
   return (
-    <Link to={`${producto.id}`}>
-    <div>
-       <div style={ {display:"flex", flexDirection:"column",alignItems:"center", height:"auto", width:"1280px"}}>
-        <h3>{producto.title}</h3>
-        <img src={producto.image} alt=""  width={350} height={350}/>
-        <h4>{producto.description}</h4>
-      </div>
-        
-      </div>
-      </Link>
+    <div className='itemBox' key={item.id}>
+      <Link to={`${item.id}`} className='boxItems'>
+        <div className='itemText'>
+          <h2 className='itemsName'>{item.name}</h2>
+          <img src={item.img} alt="" className='itemsImg' />
+          <h4 className='itemPrice'>{item.price}</h4>
+        </div>
+      </Link >
+      {/* <button className='itemButton' onClick={() => deleteItems(item.id)}>Delete</button> */}
+      <button className='itemButton' onClick={() => deleteItems(item.id)}>🛒</button>
+    </div>
   )
 }
 

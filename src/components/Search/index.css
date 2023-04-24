@@ -1,0 +1,25 @@
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchInput{
+    padding: 9px 10px 10px 40px;
+    outline: none;
+    font-size: 0.8rem;
+    border-radius: 15px;
+    color: black;
+    border: 2px solid #000000;
+    background: #fff url("../../assets/search-icon.png") no-repeat 9px center;
+    background-size: 25px;
+    width: 70px;
+    transition: all 0.8s;
+    
+}
+.searchInput:hover {
+    width: 100px;
+    background-color: #fff;
+    border-color: black;
+    box-shadow: 0 0 3px #00000080;
+}

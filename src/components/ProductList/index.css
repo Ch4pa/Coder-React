@@ -1,0 +1,41 @@
+.itemBox{
+    text-align: center;
+}
+
+.boxItems{
+    height: auto;
+    display: flex;
+    flex-direction: row ;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.itemText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.itemsName{
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.itemsImg{
+width:350px;
+height:350px;
+}
+
+.itemsPrice{
+    font-size: 1.3rem;
+}
+
+.itemButton{
+background-color: black;
+color: antiquewhite;
+border-color: 2px solid white;
+}
