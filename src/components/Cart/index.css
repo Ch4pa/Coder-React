@@ -1,0 +1,12 @@
+.cartDiv{
+    border: 2px 2px 2px 2px solid black;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    height: auto;
+    width: 100%;   
+}
+
+.cartText{
+    font-size: 1.4rem;
+}

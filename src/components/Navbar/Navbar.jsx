@@ -27,11 +27,10 @@ const Navbar = ({ ToggleTheme }) => {
         <div className="search">
         <Search />
         </div>
-        {/* <button onClick={ToggleTheme}>{value ? <BsSun/> : <BsMoonFill/>}</button> */}
         <ul className='ulNav'>
           <Link to="/home" className='liNav'>Home</Link>
-          <Link to="/products" className='liNav'>Products</Link>
-          <Link to="/about" className='liNav'>About</Link>
+          <Link to="/products" className='liNav'>Remeras</Link>
+          <Link to="/Buzos" className='liNav'>Buzos</Link>
           <Link to="/Cart"><CardWidget /></Link>
         </ul>
       </div>

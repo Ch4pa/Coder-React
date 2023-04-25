@@ -8,12 +8,12 @@ import Itemcontainer from './components/ItemContainer/Itemcontainer';
 import { ThemeContext } from './contexts/ThemeContext';
 import db from '../db/firebase-config'
 import { getDocs, collection, doc, deleteDoc } from 'firebase/firestore'
-import About from './components/About/About'
 import Cart from './components/Cart/Cart'
+import Buzos from './pages/Buzos/Buzos'
 
 
 function App() {
-  /* const [count, setCount] = useState(1);*/
+  const [count, setCount] = useState(1);
   const [items, setItems] = useState([])
 
   /* Buscador */
@@ -24,7 +24,6 @@ function App() {
   }
   const handleSubmit = (e) => {
     e.preventDefault();
-    /* console.log(input) */
     setInput("")
   }
 
@@ -54,6 +53,9 @@ function App() {
     await deleteDoc(docRef)
     getItems()
   }
+
+
+
   /* Agregar Carrrito */
 
 
@@ -88,11 +90,27 @@ function App() {
       <ThemeContext.Provider value={isDark}>
         <Routes toggleTheme={toggleTheme}>
           <Route path="/" element={<Navigate to="home"/>} />
-          <Route path="/home" element={<Home handleInput={handleInput} handleSubmit={handleSubmit} 
-          input={input} toggleTheme={toggleTheme} items={items} deleteItems={deleteItems} />} />
-          <Route path="/products" element={<Itemcontainer  input={input} toggleTheme={toggleTheme} 
-          items={items}  deleteItems={deleteItems} />} />
-          <Route path="/products/:id" element={<CardDetail items={items}/>} />
+          <Route path="/home" element={
+          <Home handleInput={handleInput} 
+          handleSubmit={handleSubmit} 
+          input={input} 
+          toggleTheme={toggleTheme} 
+          items={items} 
+          deleteItems={deleteItems} />} />
+          <Route path="/products" element={
+          <Itemcontainer  
+          input={input} 
+          toggleTheme={toggleTheme} 
+          items={items}  
+          deleteItems={deleteItems}
+           />} />
+          <Route path="/products/:id" element={<CardDetail items={items} count={count} setCount={setCount}/>} />
+          <Route path='/buzos'element={<Buzos 
+          input={input} 
+          toggleTheme={toggleTheme} 
+          items={items}  
+          deleteItems={deleteItems}/>}/>
+          <Route path='/cart' element={<Cart/>}/>
           <Route path='/404' element={<h2>404</h2>} />
         </Routes>
       </ThemeContext.Provider>

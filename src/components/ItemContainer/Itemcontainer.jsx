@@ -4,7 +4,7 @@ import ProductsList from '../ProductList/ProductsList'
 import SpinnerLoading from '../Loading/Loading'
 
 
-const Itemcontainer = ({ items, deleteItems }) => {
+const Itemcontainer = ({ items, deleteItems}) => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -12,7 +12,6 @@ const Itemcontainer = ({ items, deleteItems }) => {
       setLoading(false)
     }, 1000);
   }, [])
-
   if (loading) {
     return <SpinnerLoading />
   }
@@ -20,8 +19,9 @@ const Itemcontainer = ({ items, deleteItems }) => {
     <div>
       <Navbar />
       <div className='boxItems'>
+
         {items.map((item) => (
-          <ProductsList item={item} key={item.id} deleteItems={deleteItems} />
+          <ProductsList item={item} key={item.id} deleteItems={deleteItems}/>
         ))}
       </div>
     </div>
