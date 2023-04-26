@@ -1,13 +1,13 @@
-.boxDetail{
+.boxDetail {
     width: 100%;
     height: auto;
     margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.divDetail{
+  }
+  
+  .divDetail {
     width: 50%;
     display: flex;
     flex-direction: row;
@@ -16,27 +16,31 @@
     align-items: center;
     border: 2px solid black;
     border-radius: 10px;
-
-}
-
-.divImg{
+  }
+  
+  .divImg {
     width: 60%;
     text-align: center;
-}
-
-.divText{
+  }
+  
+  .divText {
     width: 40%;
     text-align: center;
-}
-.textDetail{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .textDetail {
     font-size: 1.4rem;
-}
-
-.imgDetail{
+  }
+  
+  .imgDetail {
     width: 300px;
     height: 300px;
-}
-
-.priceDetail{
+  }
+  
+  .priceDetail {
     font-size: 1.6rem;
-}
+  }
