@@ -1,44 +1,55 @@
-.itemBox{
-    text-align: center;
+.itemBox {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.boxItems{
-    height: auto;
-    display: flex;
-    flex-direction: row ;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    text-decoration: none;
-    color: black;
-    gap: 30px;
-    margin-top: 15px;
+.boxItems {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  gap: 30px;
+  margin-top: 15px;
 }
 
-.itemText{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.itemText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.itemsName{
-    font-size: 1.2rem;
+.itemsName {
+  font-size: 1.2rem;
 }
 
-.itemsImg{
-width:350px;
-height:350px;
+.itemsImg {
+  width: 350px;
+  height: 350px;
 }
 
-.itemsPrice{
-    font-size: 1.3rem;
+.itemsPrice {
+  font-size: 1.3rem;
 }
 
-.itemButton{
-background-color: black;
-color: antiquewhite;
-border-color: 2px solid white;
+.itemButton {
+  background-color: rgb(0, 0, 0);
+  outline: none;
+  box-shadow: none;
+  border: none;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
 }
-
+.buy_text {
+  color: #fff;
+}
